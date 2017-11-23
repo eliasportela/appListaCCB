@@ -4,13 +4,13 @@
     <div class="w3-text-white w3-hide-small w3-hide-medium">
       <div class="w3-display-topright">
         <a href="#/sel-estado" class="w3-btn">
-          <h6><b>Pesquisar Cidade</b></h6>
+          <h6 class="w3-opacity" style="font-size:0.9em"><b>PESQUISAR CIDADES</b></h6>
         </a>
         <a href="#/contato" class="w3-btn">
-          <h6><b>Informações</b></h6>
+          <h6 class="w3-opacity" style="font-size:0.9em"><b>INFORMAÇÕES</b></h6>
         </a>
         <a href="https://listaccb.com/adm/login" class="w3-btn">
-          <h6><b>Login</b></h6>
+          <h6 class="w3-opacity" style="font-size:0.9em"><b>LOGIN</b></h6>
         </a>
       </div>
     </div>

@@ -1,9 +1,14 @@
 <template>
   <div class="w3-text-white">
-    <div>
-      <a onclick="window.history.back()" class="w3-button w3-display-topleft">
+    <div class="w3-text-white w3-hide-large">
+      <a onclick="window.history.back()" class="w3-btn w3-display-topleft">
         <h5><i class="fa fa-chevron-left"></i> voltar</h5>
       </a>     
+    </div>
+    <div class="w3-text-white w3-hide-small w3-hide-medium">
+      <a href="#/" class="w3-btn w3-display-topleft">
+        <h5 class="w3-opacity"><b>Lista CCB</b></h5>
+      </a>
     </div>
     <div class="w3-display-middle w3-center" style="width:80%;z-index:1;display:none" id="load">
       <div class="w3-card-4 w3-padding-16 w3-white w3-text-teal w3-border">
@@ -11,8 +16,8 @@
         <p>Enviando, aguarde..</p>
       </div>
     </div>
-    <div class="w3-display-middle w3-padding" style="width:90%;">
-      <p class="w3-center">Preencha os dados abaixo para enviarmos as instruções em seu e-mail</p> 
+    <div class="w3-display-middle container background" style="width:90%;">
+      <p class="w3-center">Enviaremos as instruções em seu e-mail</p> 
         <label class="w3-cell-row">
           <div class="w3-cell" style="width:10%">
             <i class="fa fa-user"></i>
@@ -32,7 +37,7 @@
         </label>
         <br>
         <div class="w3-margin-top w3-center">
-          <button class="w3-button w3-round w3-teal w3-block" @click="enviar">
+          <button class="w3-btn w3-round w3-teal w3-block" @click="enviar">
             Enviar <i class="fa fa-paper-plane"></i>
           </button>
         </div>   

@@ -1,11 +1,16 @@
 <template>
   <div>
-    <div class="w3-text-white">
-      <a onclick="window.history.back()" class="w3-button w3-display-topleft">
+    <div class="w3-text-white w3-hide-large">
+      <a onclick="window.history.back()" class="w3-btn w3-display-topleft">
         <h5><i class="fa fa-chevron-left"></i> voltar</h5>
       </a>     
     </div>
-    <div class="w3-display-middle w3-text-white" style="width:90%">
+    <div class="w3-text-white w3-hide-small w3-hide-medium">
+      <a href="#/" class="w3-btn w3-display-topleft">
+        <h5 class="w3-opacity"><b>Lista CCB</b></h5>
+      </a>
+    </div>
+    <div class="w3-display-middle w3-text-white container background" style="width:90%">
       <div class="w3-center">
         <i class="fa fa-spinner fa-spin fa-2x" v-show="!load"></i>
       </div>

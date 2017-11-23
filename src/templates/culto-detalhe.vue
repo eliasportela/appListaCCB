@@ -5,27 +5,23 @@
         <h5><i class="fa fa-chevron-left"></i> voltar</h5>
       </a>     
     </div>
-    <div class="w3-text-white w3-hide-small w3-hide-medium" v-show="loadlista">
-      <a onclick="window.history.back()" class="w3-btn w3-teal w3-display-bottommiddle w3-padding w3-round" style="margin-bottom:3%">
-        <i class="fa fa-chevron-left"></i> voltar para página anterior
-      </a>
-    </div>
     <div class="w3-text-white w3-hide-small w3-hide-medium">
       <a href="#/" class="w3-btn w3-display-topleft">
-        <h5><b>Lista CCB</b></h5>
+        <h5 class="w3-opacity"><b>Lista CCB</b></h5>
       </a>
     </div>
     <div class="w3-display-middle container" style="width:90%">
       <div class="w3-center" v-show="loadlista">
-        <p>{{culto.nome_servico}}<br><small>{{culto.nome_cidade}}</small></p>  
+        <h5><i class="fa fa-th-list w3-text-white"></i></h5>
+        <p>{{culto.nome_cidade}} <br> <small>{{culto.nome_servico}}</small></p>
       </div>
       <div class="w3-display-middle" v-show="load">
         <i class="fa fa-spinner fa-spin fa-3x"></i>
       </div>
-      <div class="" style="overflow-y:auto; max-height: 60vh" v-show="loadlista">
+      <div class="background" style="overflow-y:auto; height: 53vh" v-show="loadlista">
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-map-marker"></i>
+            <i class="fa fa-map-marker w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Igreja</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.ds_igreja}}</p>
@@ -33,7 +29,7 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-calendar"></i>
+            <i class="fa fa-calendar w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Data</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.data}}</p>
@@ -41,7 +37,7 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-clock-o"></i>
+            <i class="fa fa-clock-o w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Horário</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.horario}}</p>
@@ -49,7 +45,7 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-user w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Ancião</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.anciao}}</p>
@@ -57,7 +53,7 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center" v-show="loadEnsaio">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-music"></i>
+            <i class="fa fa-music w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Encarregado</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.encarregado}}</p>

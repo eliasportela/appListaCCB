@@ -50,10 +50,20 @@ export default {
   .w3-btn:hover {
     box-shadow: none !important;
   }
-
+.background {
+    background-color:rgba(0,0,0,0.3);
+    border: 1px solid #ddd;
+    padding: 2%;
+  }
 @media screen and (min-width: 768px) {
-  .container{width: 60% !important; padding: 5%;}
-  p {font-size: 1.1em}
+  .container{width: 60% !important; padding: 3%}
+  p {
+    font-size: 1.1em;
+    color: #ccc;
+  }
+  .web {
+    height: 60vh !important;
+  }
 }
 
 </style>

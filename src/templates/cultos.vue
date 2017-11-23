@@ -12,7 +12,7 @@
     </div>
     <div class="w3-text-white w3-hide-small w3-hide-medium">
       <a href="#/" class="w3-btn w3-display-topleft">
-        <h5><b>Lista CCB</b></h5>
+        <h5 class="w3-opacity"><b>Lista CCB</b></h5>
       </a>
     </div>
     
@@ -20,18 +20,19 @@
     <div class="w3-display-middle container" style="width:90%">
       <div class="w3-center">
         <div v-show="loadculto">
-          <p>{{regiao}} <br> {{mes}} de {{ano}}</p>  
+          <h5><i class="fa fa-th-list w3-text-white"></i></h5>
+          <p>{{regiao}} <br class="w3-hide-large w3-hide-medium"> <span class="w3-hide-small"> - </span> {{mes}} de {{ano}}</p>  
         </div>
       </div>
       <!--Painel principal-->
-      <div style="overflow-y:auto; height: 60vh;" class="w3-border" v-show="!load">
-        <div v-show="loadculto" class="w3-border">
+      <div style="overflow-y:auto; height: 50vh;" class="background web" v-show="!load">
+        <div v-show="loadculto">
           <a v-for="obj in listaculto" :href="'#/detalhes/'+ obj.id_lista_culto" class="w3-cell-row w3-border-bottom w3-center">
             <div class="w3-cell w3-cell-middle" style="width:20%">
               {{obj.data}}
             </div>
             <div class="w3-cell w3-cell-middle" style="width:65%">
-              <p><small>{{obj.nome_servico}}</small> <br> <small>{{obj.nome_cidade}}</small> <br> <small>{{obj.ds_igreja}}</small></p>
+              <p><small>{{obj.nome_servico}} - {{obj.nome_cidade}} ({{obj.ds_igreja}})</small></p>
             </div>
             <div class="w3-cell w3-cell-middle" style="width:15%">
               <i class="fa fa-info-circle"></i>
@@ -85,6 +86,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="w3-display-bottommiddle w3-hide-large w3-hide-medium w3-center w3-margin-bottom" style="width:90%">
+      <i class="fa fa-chevron-down"></i>
     </div>
     <!--Painel principal fim-->
     

@@ -12,38 +12,34 @@
     </div>
     <div class="w3-text-white w3-hide-small w3-hide-medium">
       <a href="#/" class="w3-btn w3-display-topleft">
-        <h5><b>Lista CCB</b></h5>
+        <h5 class="w3-opacity"><b>Lista CCB</b></h5>
       </a>
     </div>
     <!--Titulo-->
-    <div class="w3-display-middle" style="width:90%">
+    <div class="w3-display-middle container" style="width:90%">
       <div class="w3-center">
         <div v-show="loadculto">
-          <p>{{cidade}} <br> {{mes}} de {{ano}}</p>  
-        </div>
-        <div class="w3-padding" v-show="msg">
-          <a href="#/receber-lista">
-            <button class="w3-btn w3-teal w3-round w3-block"><i class="fa fa-envelope"></i> Cadastrar e-mail</button>
-          </a>
+          <h5><i class="fa fa-th-list w3-text-white"></i></h5>
+          <p>{{cidade}} <br> <small>{{mes}} de {{ano}}</small></p>  
         </div>
       </div>
       <!--Painel principal-->
-      <div style="overflow-y:auto; height: 60vh;" class="w3-border" v-show="!load">
-        <div v-show="loadculto" class="w3-border">
-          <a href="#" v-for="obj in listaculto" class="w3-cell-row w3-border-bottom w3-center">
-            <div class="w3-cell w3-cell-middle" style="width:20%">
+      <div style="overflow-y:auto; height: 50vh;" class="background" v-show="!load">
+        <div v-show="loadculto">
+          <a v-for="obj in listaculto" :href="'#/detalhes/'+ obj.id_lista_culto" class="w3-cell-row w3-border-bottom w3-center">
+            <div class="w3-cell w3-cell-middle" style="width:15%">
               {{obj.data}}
             </div>
-            <div class="w3-cell w3-cell-middle" style="width:70%">
-              <p>{{obj.nome_servico}} <br> <small>{{obj.nome_cidade}}</small> <br> <small>{{obj.ds_igreja}}</small></p>
+            <div class="w3-cell w3-cell-middle" style="width:75%">
+              <p><small>{{obj.nome_servico}} - {{obj.nome_cidade}} ({{obj.ds_igreja}})</small></p>
             </div>
             <div class="w3-cell w3-cell-middle" style="width:10%">
-              <i class="fa fa-chevron-right"></i>
+              <i class="fa fa-info-circle"></i>
             </div>  
           </a>
           <div class="w3-padding-8 w3-padding w3-center" v-show="baixar">
             <p>Baixar a lista no formato PDF</p>
-            <a :href="'http://adm.listaccb.com/uploads/listas/' + lista.file_lista" class="w3-btn w3-teal w3-block" download>
+            <a :href="'https://listaccb.com/adm/uploads/listas/' + lista.file_lista" class="w3-btn w3-teal w3-block" download>
               <i class="fa fa-cloud-download"></i>
               Baixar Lista
             </a>  
@@ -67,9 +63,9 @@
           <div class="w3-margin-bottom">
             <div class="w3-margin-top w3-center">
               <div v-show="baixar" class="w3-padding">
-                <a :href="'http://adm.listaccb.com/uploads/listas/' + lista.file_lista" class="w3-btn w3-teal w3-block" download>
+                <a :href="'https://listaccb.com/adm/uploads/listas/' + lista.file_lista" class="w3-btn w3-teal w3-block" download>
                   <i class="fa fa-cloud-download"></i>
-                  Baixar Lista
+                  Baixar Lista da Região
                 </a>     
               </div>
               <div v-show="loadlista" class="w3-padding">
