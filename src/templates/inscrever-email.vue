@@ -16,8 +16,8 @@
         <p>Enviando, aguarde..</p>
       </div>
     </div>
-    <div class="w3-display-middle container background" style="width:90%;">
-      <p class="w3-center">Enviaremos as instruções em seu e-mail</p> 
+    <div class="w3-display-middle container inicial" style="width:90%;">
+      <p class="w3-center">Preencha os dados. Enviaremos as instruções em seu e-mail</p> 
         <label class="w3-cell-row">
           <div class="w3-cell" style="width:10%">
             <i class="fa fa-user"></i>
@@ -56,6 +56,16 @@ export default {
         "nome": ''
       },
     }
+  },
+  created: function () {
+    /*/ comentar no modo producao
+    setTimeout(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+    }, 300);
+    /*/
   },
   methods: {
       enviar(){

@@ -64,6 +64,11 @@ export default {
   .web {
     height: 60vh !important;
   }
+  .inicial {
+    background-color:rgba(0,0,0,0.3);
+    border: 1px solid #ddd;
+    padding: 2%; 
+  }
 }
 
 </style>

@@ -33,8 +33,11 @@
             <div class="w3-cell w3-cell-middle" style="width:75%">
               <p><small>{{obj.nome_servico}} - {{obj.nome_cidade}} ({{obj.ds_igreja}})</small></p>
             </div>
-            <div class="w3-cell w3-cell-middle" style="width:10%">
+            <div class="w3-cell w3-cell-middle w3-hide-large w3-hide-medium" style="width:10%">
               <i class="fa fa-info-circle"></i>
+            </div>
+            <div class="w3-cell w3-cell-middle w3-hide-small" style="width:10%">
+              <button class="w3-btn w3-border"><i class="fa fa-info-circle"></i> Informações</button>
             </div>  
           </a>
           <div class="w3-padding-8 w3-padding w3-center" v-show="baixar">
@@ -45,6 +48,7 @@
             </a>  
           </div>
           <div class="w3-center w3-padding">
+            <p>Visualiazar a lista completa</p>
             <a :href="'#/cultos/' + lista.id_lista" class="w3-btn w3-teal w3-block">
               Acessar Lista
               <i class="fa fa-chevron-right"></i>

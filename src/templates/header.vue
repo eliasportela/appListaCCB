@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--Cabecalho em desktop-->
-    <div class="w3-text-white w3-hide-small w3-hide-medium">
+    <div class="w3-text-white w3-hide-small">
       <div class="w3-display-topright">
         <a href="#/sel-estado" class="w3-btn">
           <h6 class="w3-opacity" style="font-size:0.9em"><b>PESQUISAR CIDADES</b></h6>
@@ -15,7 +15,7 @@
       </div>
     </div>
     <!--Cabecalho em dispositivos moveis-->
-    <div class="w3-text-white w3-hide-large">
+    <div class="w3-text-white w3-hide-medium w3-hide-large">
       <button @click="menuAction" class="w3-btn w3-display-topright w3-hover">
         <h4 style="padding-right:8px;"><i class="fa fa-bars"></i></h4>
       </button>

@@ -34,8 +34,11 @@
             <div class="w3-cell w3-cell-middle" style="width:65%">
               <p><small>{{obj.nome_servico}} - {{obj.nome_cidade}} ({{obj.ds_igreja}})</small></p>
             </div>
-            <div class="w3-cell w3-cell-middle" style="width:15%">
+            <div class="w3-cell w3-cell-middle w3-hide-large w3-hide-medium" style="width:15%">
               <i class="fa fa-info-circle"></i>
+            </div>  
+            <div class="w3-cell w3-cell-middle w3-hide-small" style="width:15%">
+              <button class="w3-btn w3-border">Informações</button>
             </div>  
           </a>
           <div class="w3-padding-8 w3-padding w3-center" v-show="baixar">

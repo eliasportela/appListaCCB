@@ -15,7 +15,7 @@
     </div>
     <div class="w3-display-middle container" style="width:90%">
       <div class="w3-padding-16">
-        <input class="w3-input" type="text" placeholder="Pesquisar Região" v-model="filtro">
+        <input class="w3-input w3-border" type="text" placeholder="Pesquisar Região" v-model="filtro" autofocus>
       </div>
       <div class="background" style="overflow-y:auto; height: 60vh;">
         <a v-for="regiao in limitBy(filterBy(regioes, filtro), 20)" :href="'#/sel-email/' + regiao.id_regiao" class="w3-cell-row w3-border-bottom linka">

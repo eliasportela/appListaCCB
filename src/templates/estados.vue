@@ -12,14 +12,16 @@
     </div>
     <div class="w3-display-middle container" style="width:90%;">
       <h5 class="w3-center w3-hide-small">Selecione o estado</h5>
+      <!--
       <div>
         <input class="w3-input" type="text" placeholder="Pesquisar estado" v-model="filtro">
       </div>
       <br>
+      -->
       <div class="w3-display-middle" v-show="load">
         <i class="fa fa-spinner fa-spin fa-3x"></i>
       </div>
-      <div class="background" style="overflow-y:auto; height: 55vh;">
+      <div class="background" style="overflow-y:auto; height: 65vh;">
         <a v-for="estado in limitBy(filterBy(estados, filtro), 27)" :href="'#/listas/' + estado.id_estado" class="w3-cell-row w3-border-bottom linka">
           <div class="w3-cell" style="width:80%">
             <p>{{estado.nome_estado}}</p>

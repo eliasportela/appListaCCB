@@ -21,7 +21,7 @@
       <div class="background" style="overflow-y:auto; height: 53vh" v-show="loadlista">
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-map-marker w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Igreja</span>
+            <i class="fa fa-map-marker"></i> <span class="w3-hide-small">Igreja</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.ds_igreja}}</p>
@@ -29,7 +29,7 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-calendar w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Data</span>
+            <i class="fa fa-calendar"></i> <span class="w3-hide-small">Data</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.data}}</p>
@@ -37,7 +37,7 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-clock-o w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Horário</span>
+            <i class="fa fa-clock-o"></i> <span class="w3-hide-small">Horário</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.horario}}</p>
@@ -45,7 +45,7 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-user w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Ancião</span>
+            <i class="fa fa-user"></i> <span class="w3-hide-small">Ancião</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.anciao}}</p>
@@ -53,13 +53,14 @@
         </div>
         <div class="w3-cell-row w3-border-bottom w3-center" v-show="loadEnsaio">
           <div class="w3-cell w3-cell-middle" style="width:10%">
-            <i class="fa fa-music w3-hide-medium w3-hide-large"></i> <span class="w3-hide-small">Encarregado</span>
+            <i class="fa fa-music"></i> <span class="w3-hide-small">Encarregado</span>
           </div>  
           <div class="w3-cell w3-cell-middle" style="width:75%">
             <p>{{culto.encarregado}}</p>
           </div>
         </div>
       </div>
+      <a href="#/estados" v-show="!load" class="w3-btn w3-block w3-teal w3-margin-top w3-hide-small"><i class="fa fa-search"> Nova Pesquisa</i></a>
       <div v-show="loadBad" class="w3-display-middle w3-center" style="width:90%">
         <i class="fa fa-frown-o fa-2x"></i>
         <p>Infelizmente ainda não temos cadastros de listas neste estado.</p>
